@@ -70,7 +70,7 @@ public class RockPaperScissors extends Puzzle {
 
             return calculateGameScore(opponentChoice, myChoice);
         })
-        .reduce((a, b) -> a + b)
+        .reduce(Integer::sum)
         .orElse(0);
 
         return String.valueOf(strategyGuideScore);

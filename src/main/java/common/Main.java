@@ -2,6 +2,7 @@ package common;
 
 import day1.CaloriesCounting;
 import day2.RockPaperScissors;
+import day3.RucksackReorganization;
 
 import java.util.List;
 
@@ -9,7 +10,8 @@ public class Main {
 
     private static final List<Puzzle> PUZZLES = List.of(
             new CaloriesCounting(InputFetcher.fetchMainInput("day1")),
-            new RockPaperScissors(InputFetcher.fetchMainInput("day2"))
+            new RockPaperScissors(InputFetcher.fetchMainInput("day2")),
+            new RucksackReorganization(InputFetcher.fetchMainInput("day3"))
     );
 
     public static void main(String[] args) {
