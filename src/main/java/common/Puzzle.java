@@ -11,8 +11,8 @@ public abstract class Puzzle {
     @Getter
     private final List<String> puzzleInput;
 
-    public abstract String solvePart1();
-    public abstract String solvePart2();
+    public abstract Object solvePart1();
+    public abstract Object solvePart2();
 
     public abstract int getDay();
 
