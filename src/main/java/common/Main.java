@@ -4,6 +4,7 @@ import day1.CaloriesCounting;
 import day2.RockPaperScissors;
 import day3.RucksackReorganization;
 import day4.CampCleanup;
+import day5.SupplyStacks;
 
 import java.util.List;
 
@@ -13,7 +14,8 @@ public class Main {
             new CaloriesCounting(InputFetcher.fetchMainInput("day1")),
             new RockPaperScissors(InputFetcher.fetchMainInput("day2")),
             new RucksackReorganization(InputFetcher.fetchMainInput("day3")),
-            new CampCleanup(InputFetcher.fetchMainInput("day4"))
+            new CampCleanup(InputFetcher.fetchMainInput("day4")),
+            new SupplyStacks(InputFetcher.fetchMainInput("day5"))
     );
 
     public static void main(String[] args) {
