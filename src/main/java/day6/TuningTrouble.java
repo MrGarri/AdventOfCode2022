@@ -1,10 +1,9 @@
 package day6;
 
 import common.Puzzle;
-import lombok.NonNull;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class TuningTrouble extends Puzzle {
     public TuningTrouble(List<String> puzzleInput) {
@@ -13,32 +12,12 @@ public class TuningTrouble extends Puzzle {
 
     @Override
     public Integer solvePart1() {
-        final String buffer = getPuzzleInput().get(0);
-
-        for (int i = 0; i < buffer.length() - 3; i++) {
-            String marker = buffer.substring(i, i + 4);
-            Set<Character> charSet = stringToCharSet(marker);
-            if (charSet.size() == marker.length()) {
-                return i + 4;
-            }
-        }
-
-        return -1;
+        return findMarker(4);
     }
 
     @Override
     public Object solvePart2() {
-        final String buffer = getPuzzleInput().get(0);
-
-        for (int i = 0; i < buffer.length() - 13; i++) {
-            String marker = buffer.substring(i, i + 14);
-            Set<Character> charSet = stringToCharSet(marker);
-            if (charSet.size() == marker.length()) {
-                return i + 14;
-            }
-        }
-
-        return -1;
+        return findMarker(14);
     }
 
     @Override
@@ -46,9 +25,14 @@ public class TuningTrouble extends Puzzle {
         return 6;
     }
 
-    private Set<Character> stringToCharSet(@NonNull final String s) {
-        return s.chars()
-                .mapToObj(c -> (char) c)
-                .collect(Collectors.toSet());
+    private int findMarker(final int distinctChars) {
+        final String buffer = getPuzzleInput().get(0);
+
+        int firstMarker = IntStream.range(0, buffer.length() - distinctChars - 1)
+                .filter(i -> buffer.substring(i, i + distinctChars).chars().distinct().count() == distinctChars)
+                .findFirst()
+                .orElse(-1);
+
+        return firstMarker + distinctChars;
     }
 }
