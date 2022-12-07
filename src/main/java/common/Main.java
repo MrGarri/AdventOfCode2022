@@ -6,6 +6,8 @@ import day3.RucksackReorganization;
 import day4.CampCleanup;
 import day5.SupplyStacks;
 import day6.TuningTrouble;
+import day7.NoSpaceLeftOnDevice;
+import utils.InputFetcher;
 
 import java.util.List;
 
@@ -17,7 +19,8 @@ public class Main {
             new RucksackReorganization(InputFetcher.fetchMainInput("day3")),
             new CampCleanup(InputFetcher.fetchMainInput("day4")),
             new SupplyStacks(InputFetcher.fetchMainInput("day5")),
-            new TuningTrouble(InputFetcher.fetchMainInput("day6"))
+            new TuningTrouble(InputFetcher.fetchMainInput("day6")),
+            new NoSpaceLeftOnDevice(InputFetcher.fetchMainInput("day7"))
     );
 
     public static void main(String[] args) {
