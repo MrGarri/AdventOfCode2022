@@ -7,6 +7,7 @@ import day4.CampCleanup;
 import day5.SupplyStacks;
 import day6.TuningTrouble;
 import day7.NoSpaceLeftOnDevice;
+import day8.TreetopTreeHouse;
 import utils.InputFetcher;
 
 import java.util.List;
@@ -20,7 +21,8 @@ public class Main {
             new CampCleanup(InputFetcher.fetchMainInput("day4")),
             new SupplyStacks(InputFetcher.fetchMainInput("day5")),
             new TuningTrouble(InputFetcher.fetchMainInput("day6")),
-            new NoSpaceLeftOnDevice(InputFetcher.fetchMainInput("day7"))
+            new NoSpaceLeftOnDevice(InputFetcher.fetchMainInput("day7")),
+            new TreetopTreeHouse(InputFetcher.fetchMainInput("day8"))
     );
 
     public static void main(String[] args) {
